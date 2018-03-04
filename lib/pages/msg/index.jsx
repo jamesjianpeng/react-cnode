@@ -7,7 +7,7 @@ export default class Msg extends React.Component {
 
   render() {
     return (
-      <div>msg page</div>
+      <span>msg page</span>
     )
   }
 }

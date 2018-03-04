@@ -36,7 +36,7 @@ class MailFolderListItems extends React.Component{
         <ListItemText primary="msg" />
       </ListItem>
       <Divider />
-      <ListItem button onClick={this.clickItem.bind(this, '/topic')}>
+      <ListItem button onClick={this.clickItem.bind(this, '/theme')}>
         <ListItemIcon>
           <DraftsIcon />
         </ListItemIcon>
