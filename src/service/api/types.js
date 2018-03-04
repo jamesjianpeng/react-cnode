@@ -20,10 +20,4 @@ const apiUrl = {
 
 _defineProperty(apiUrl)
 
-const handlerApiUrl = (apiUrl) => {
-  if (!apiUrl) return
-  console.log(Reflect.ownKeys(apiUrl))  // [ ...... ]
-  console.log(Object.keys(apiUrl)) // []
-}
-
 export default apiUrl
