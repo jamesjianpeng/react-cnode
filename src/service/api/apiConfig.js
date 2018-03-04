@@ -1,4 +1,4 @@
-import { T, C T_C GET, POST } from './types'
+import types from './types'
 
 /**
 * user -> U
@@ -10,11 +10,11 @@ import { T, C T_C GET, POST } from './types'
 const user = {
   U: {
     name: `/user/:loginName`,
-    methods: POST
+    methods: types.POST
   },
   U_T: {
     name: `/accesstoken`,
-    methods: POST
+    methods: types.POST
   }
 }
 
@@ -22,81 +22,81 @@ const messages = {
   M_conut: {
     name: `/message/count`,
     needToken: true,
-    methods: GET
+    methods: types.GET
   },
   M_list: {
     name: `/messages`,
     needToken: true,
-    methods: GET
+    methods: types.GET
   },
   M_mark_all: {
     name: `/message/mark_all`,
     needToken: true,
-    methods: POST
+    methods: types.POST
   },
   M_mark_one: {
     name: `/message/mark_one/:msg_id`,
     needToken: true,
-    methods: POST
+    methods: types.POST
   }
 }
 
 const replies = {
   // 评论
   R: {
-    name: `/${T}/:topicId/replies`,
+    name: `/${types.T}/:topicId/replies`,
     needToken: true,
-    methods: POST
+    methods: types.POST
   },
   // 为评论点赞
   R_ups: {
-    name: `/${T}/:replyId/ups`,
+    name: `/${types.T}/:replyId/ups`,
     needToken: true,
-    methods: POST
+    methods: types.POST
   }
 }
 
-consot topics = {
+const topics = {
   T_list: {
-    name: `/${T}`,
-    methods: GET
+    name: `/${types.T}`,
+    methods: types.GET
   },
   T_One: {
-    name: `/${T}/:id`,
-    methods: GET
+    name: `/${types.T}/:id`,
+    methods: types.GET
   },
   T_new: {
-    name: `/${T}`,
+    name: `/${types.T}`,
     needToken: true,
-    methods: POST
+    methods: types.POST
   },
   T_U: {
-    name: `/${T}/update`,
+    name: `/${types.T}/update`,
     needToken: true,
-    methods: POST
+    methods: types.POST
   },
   // 收藏
   T_C_L_list: {
-    name: `/${T}`,
-    methods: get
+    name: `/${types.T}`,
+    methods: types.GET
   },
   T_C_one: {
-    name: `/${T_C}/${C}`,
+    name: `/$types.T_C}/${types.C}`,
     needToken: true,
-    methods: POST
+    methods: types.POST
   },
   T_C_del: {
-    name: `/${T_C}/de_${C}`,
+    name: `/${types.T_C}/de_${types.C}`,
     needToken: true,
-    methods: POST
+    methods: types.POST
   }
 }
 
 export default {
   // 主题
-  ...topics
+  ...topics,
   // 评论 和为 评论点赞
-  ...replies
+  ...replies,
   // 用户
   ...user,
   // 消息通知

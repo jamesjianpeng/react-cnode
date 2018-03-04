@@ -5,7 +5,7 @@ export default class Env {
   }
   getEnv () {
     return {
-      env: this..env,
+      env: this.env,
       baseUrl: this.baseUrl
     }
   }

@@ -7,15 +7,15 @@ const T = 'topics'
 const C = 'collect'
 
 const apiUrl = {
-  name: {
-    T,
-    C,
-    T_C: `${T}_${C}`
-  },
-  methods: {
-    GET: 'get',
-    POST: 'post'
-  }
+  // name: {
+  // },
+  T,
+  C,
+  T_C: `${T}_${C}`,
+  GET: 'get',
+  POST: 'post'
+  // methods: {
+  // }
 }
 
 _defineProperty(apiUrl)
